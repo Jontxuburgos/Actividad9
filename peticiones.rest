@@ -1,0 +1,31 @@
+ @host = http://localhost:3000
+
+#### PETICIONES DE POSTS ####
+### GET
+GET {{host}}/api/posts
+### POST
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "Prueba",
+    "descripcion": "descripcion prueba",
+    "fecha_inscripcion": "2023-02-02",
+    "categoria": "Romance",
+}
+
+#### PETICIONES DE AUTORES ####
+### GET
+GET {{host}}/api/autores
+### POST
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Antonio Gemar",
+    "email": "antgem@email.com",
+    "imagen": "Antonio.png"
+}  
+
+### ENCONTRAR POST ESCRITOS POR AUTORES ###
+GET {{host}}/api/autores/posts
