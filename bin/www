@@ -8,6 +8,13 @@ const app = require('../app');
 const debug = require('debug')('appblog:server');
 const http = require('http');
 
+//Config .env
+require('dotenv').config();
+
+//Config DB
+
+require('../config/db');
+
 /**
  * Get port from environment and store in Express.
  */

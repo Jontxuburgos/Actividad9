@@ -7,10 +7,10 @@ para la obtención y creación de los posts y de los autores. La url para cada u
 los modelos debe partir con el prefijo /api
 
     GET /api/posts
-    PUT /api/posts
+    POST /api/posts
 
     GET /api/autores
-    GET /api/autores
+    POST /api/autores
 
 - Cada post recuperado debería ir acompañado de todos los datos del autor de este
 y no solo del identificador que lo define.
