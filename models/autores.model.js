@@ -7,10 +7,10 @@ const getById = (autoresid) => {
 };
 
 const create = ({ nombre, email, imagen }) => {
-    return db.query(
-        'insert into autores (nombre, email, imagen) values (?, ?, ?)',
-        [nombre, email, imagen]
-    );
-}
+  return db.query(
+    "insert into autores (nombre, email, imagen) values (?, ?, ?)",
+    [nombre, email, imagen]
+  );
+};
 
 module.exports = { getAll, getById, create };

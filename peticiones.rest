@@ -17,7 +17,7 @@ Content-Type: application/json
 #### PETICIONES DE AUTORES ####
 ### GET
 GET {{host}}/api/autores
-###
+### POST
 POST {{host}}/api/autores
 Content-Type: application/json
 
@@ -26,3 +26,6 @@ Content-Type: application/json
     "email": "antgem@email.com",
     "imagen": "Antonio.png"
 }  
+
+### ENCONTRAR POST ESCRITOS POR AUTORES ###
+GET {{host}}/api/autores/posts
