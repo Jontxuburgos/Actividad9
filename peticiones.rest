@@ -1,4 +1,15 @@
  @host = http://localhost:3000
 
-#### PETICIONES POSTS ####
+#### PETICIONES DE POSTS ####
+### GET
 GET {{host}}/api/posts
+### POST
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "Prueba",
+    "descripcion": "descripcion prueba",
+    "fecha_inscripcion": "2023-02-02",
+    "categoria": "Romance",
+}

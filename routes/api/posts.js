@@ -1,4 +1,4 @@
-const {getAll} = require("../../models/posts.model");
+const {getAll, create, getById} = require("../../models/posts.model");
 
 const router = require('express').Router();
 
@@ -13,6 +13,16 @@ router.get("/", async(req, res) => {
 });
 
 
+router.post("/", async (req, res) => {
+  try {
+      const [result] = await create(req.body);
+      const [posts] = await getById(result.insertId);
+      res.json(posts[0]);
+  } catch (error) {
+      console.log(error);
+      res.json({ fatal: error.message });
+  }
+});
 
 
 module.exports = router;
