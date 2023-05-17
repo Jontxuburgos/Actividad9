@@ -1,18 +1,16 @@
-const getAll = () => { 
-    return db.query('select * from posts');
- }
+const getAll = () => {
+  return db.query("select * from posts");
+};
 
-const create = ({titulo, descripcion, fecha_inscripcion, categoria}) => {
-    return db.query(
-        'insert into posts (titulo, descripcion, fecha_inscripcion, categoria) values (?, ?, ?, ?)',
-        [titulo, descripcion, fecha_inscripcion, categoria],
-    );
-
+const getById = (postsId) => {
+    return db.query('select * from posts where id = ?', [postsId])
 }
 
-const getById = (postsid) => { 
-    return db.query('SELECT * FROM posts WHERE id = ?', [postsid]);
-}
+const create = ({ titulo, descripcion, fecha_inscripcion, categoria }) => {
+  return db.query(
+    "insert into posts (titulo, descripcion, fecha_inscripcion, categoria) values (?, ?, ?, ?)",
+    [titulo, descripcion, fecha_inscripcion, categoria]
+  );
+};
 
-
- module.exports = {getAll, create, getById}
+module.exports = { getAll, getById, create };

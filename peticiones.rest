@@ -16,6 +16,13 @@ Content-Type: application/json
 
 #### PETICIONES DE AUTORES ####
 ### GET
-
 GET {{host}}/api/autores
+###
+POST {{host}}/api/autores
+Content-Type: application/json
 
+{
+    "nombre": "Antonio Gemar",
+    "email": "antgem@email.com",
+    "imagen": "Antonio.png"
+}  
